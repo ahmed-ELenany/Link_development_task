@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Link_development_task.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Link_development_task.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F1F1"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#ffffff">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivArticleImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/placeholder" />
+
+                        <TextView
+                            android:id="@+id/tvPublishedAt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/ivArticleImage"
+                            android:background="#6A000000"
+                            android:gravity="end"
+                            android:padding="10dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12dp"
+                            tools:text="April 3,2017" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="#000"
+                        android:textSize="16dp"
+                        tools:text="US inflation reached a new 40-year high in June of 9.1%" />
+
+                    <TextView
+                        android:id="@+id/tvAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="#8C8C8C"
+                        android:textSize="13dp"
+                        tools:text="By CHRISTOPHER RUGABER" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:lineHeight="17dp"
+                        android:textColor="#8C8C8C"
+                        android:textSize="13dp"
+                        tools:text="NEW YORK (AP) — Donald Trump and two of his children — Donald Jr. and Ivanka — are due, in the coming days, to face questioning under oath in New York's civil investigation into their business practices." />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnOpenUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="15dp"
+                android:text="OPEN WEBSITE"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
